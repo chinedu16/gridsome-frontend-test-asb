@@ -24,7 +24,7 @@
 							<div class="container-image">
 								<h4><b>One</b></h4> 
 								<p>Place any text you want here etc.
-									We invest between N2m - N5m in marketing, production fees.</p> 
+									We invest between N2m - N5m in marketing, production and promotional fees.</p> 
 							</div>
 						</div>
 					</div>
@@ -34,7 +34,7 @@
 							<div class="container-image">
 								<h4><b>Two</b></h4> 
 								<p>Place any text you want here etc.
-									We invest between N2m - N5m in marketing, production fees.</p>
+									We invest between N2m - N5m in marketing, production and promotional fees.</p>
 							</div>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 							<div class="container-image">
 								<h4><b>Three</b></h4> 
 								<p>Place any text you want here etc.
-									We invest between N2m - N5m in marketing, production fees,</p>
+									We invest between N2m - N5m in marketing, production and promotional fees,</p>
 							</div>
 						</div>
 					</div>

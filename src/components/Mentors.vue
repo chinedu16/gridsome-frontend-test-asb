@@ -21,8 +21,8 @@
 				</div>
 				<div class="mentors-info">
 					<div class="mentors-icons">
-						<font-awesome @click="swapNodes" :icon="['far', 'arrow-alt-circle-left']"/>
-						<font-awesome :icon="['far', 'arrow-alt-circle-right']"/>
+						<font-awesome @click="swapNodesLeft" :icon="['far', 'arrow-alt-circle-left']"/>
+						<font-awesome  @click="swapNodesRight" :icon="['far', 'arrow-alt-circle-right']"/>
 					</div>
 					<h2>Timbaland</h2>
 					<p>Ut ac quam fringilla, molestie erat quis, laoreet mauris. In porta est gravida ante laoreet convallis.
@@ -57,13 +57,25 @@ export default {
     }
   },
   methods: {
-		swapNodes () {
+		swapNodesLeft () {
 			console.log('swapping Node...');
-			this.swapSiblings(document.getElementById('1'), document.getElementById('2'), document.getElementById('3'))
+			this.swapSiblings_left(document.getElementById('1'), document.getElementById('2'), document.getElementById('3'))
 		},
-		swapSiblings(node1, node2, node3) {
+		swapNodesRight () {
+			console.log('swapping Node...');
+			this.swapSiblings_right(document.getElementById('1'), document.getElementById('2'), document.getElementById('3'))
+		},
+		swapSiblings_left(node1, node2, node3) {
 			let container = node2.parentNode;
-			container.appendChild(node2, node1, node3)
+			container.appendChild(node2)
+			container.appendChild(node3)
+			container.appendChild(node1)
+		},
+		swapSiblings_right(node1, node2, node3) {
+			let container = node2.parentNode;
+			container.appendChild(node1)
+			container.appendChild(node2)
+			container.appendChild(node3)
 		}
   }
 }
