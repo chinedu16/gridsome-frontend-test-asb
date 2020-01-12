@@ -1,16 +1,16 @@
 <template>
   <div class="layout">
     <header class="header">
-      <strong>
-       <g-image alt="Logo" src="~/logo.png" width="15" /> <g-link to="/" >Gidera</g-link>
+      <strong >
+       <g-image alt="Logo" src="~/logo.png" style="width: 27px; height: 24px;" /> <g-link to="/" >Gidera</g-link>
       </strong>
       <nav class="nav">
         <g-link class="nav__link" to="/">Companies</g-link>
-        <g-link class="nav__link" to="/about/">Team</g-link>
-        <g-link class="nav__link" to="/team/">Resources</g-link>
+        <g-link class="nav__link" to="/">Team</g-link>
+        <g-link class="nav__link" to="/">Resources</g-link>
         <g-link class="nav__link" to="/">Programs</g-link>
-        <g-link class="nav__link" to="/about/">Blog</g-link>
-        <g-link class="nav__link" to="/team/">Contact</g-link>
+        <g-link class="nav__link" to="/">Blog</g-link>
+        <g-link class="nav__link" to="/">Contact</g-link>
       </nav>
     </header>
     <slot/>
@@ -25,6 +25,22 @@ query {
 }
 </static-query>
 
+
+<script>
+export default {
+
+  methods: {
+    menubar () {
+      let sidebar = document.querySelectorAll('nav');
+      console.log(sidebar)
+    }
+  },
+  created() {
+    this.menubar();
+  }
+  
+}
+</script>
 <style>
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
@@ -52,10 +68,12 @@ body {
   color: white;
   font-weight: lighter;
 }
-
+strong {
+  display: flex;
+}
 
 strong a {
-  margin: 10px;
+  margin-left: 10px;
   color: #20de86;
   text-decoration: none;
   /* color: black; */

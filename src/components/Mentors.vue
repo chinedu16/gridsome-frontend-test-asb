@@ -2,19 +2,48 @@
   <div class="card">
 		<h1>Our Mentors</h1>
     <div class="mentors-container">
-			<div class="mentors">
-			<div class="mentors-image">
-					<g-image src="~/assets/Mentors section image 2 - Timbaland.png" style="width: 100%;"/>
-			</div>
-			<div class="mentors-info">
-				<h2>Timbaland</h2>
-				<p>Ut ac quam fringilla, molestie erat quis, laoreet mauris. In porta est gravida ante laoreet convallis.
-					Phasellus dapibus, tellus eget facilisis ullamcorper, velit massa eleifend nunc,
-					in eleifend sem erat sed quam. Praesent quis arcu a nisl feugiat pretium.
-				 
-				</p>
-			</div>
-    </div>
+			<div class="mentors" id="1">
+				<div class="mentors-image">
+						<g-image src="~/assets/Mentors section image 1 - Killer Mike.png" style="width: 100%;"/>
+				</div>
+				<div class="mentors-info">
+					<div class="mentors-icons"></div>
+					<h2>Killer Mike</h2>
+					<p>Ut ac quam fringilla, molestie erat quis, laoreet mauris. In porta est gravida ante laoreet convallis.
+						Phasellus dapibus, tellus eget facilisis ullamcorper, velit massa eleifend nunc,
+						in eleifend sem erat sed quam. Praesent quis arcu a nisl feugiat pretium.
+					</p>
+				</div>
+    	</div>
+			<div class="mentors" id="2">
+				<div class="mentors-image">
+						<g-image src="~/assets/Mentors section image 2 - Timbaland.png" style="width: 100%;"/>
+				</div>
+				<div class="mentors-info">
+					<div class="mentors-icons">
+						<font-awesome @click="swapNodes" :icon="['far', 'arrow-alt-circle-left']"/>
+						<font-awesome :icon="['far', 'arrow-alt-circle-right']"/>
+					</div>
+					<h2>Timbaland</h2>
+					<p>Ut ac quam fringilla, molestie erat quis, laoreet mauris. In porta est gravida ante laoreet convallis.
+						Phasellus dapibus, tellus eget facilisis ullamcorper, velit massa eleifend nunc,
+						in eleifend sem erat sed quam. Praesent quis arcu a nisl feugiat pretium.
+					</p>
+				</div>
+    	</div>
+			<div class="mentors" id="3">
+				<div class="mentors-image">
+						<g-image src="~/assets/Mentors section image 3 - Chance the rapper.png" style="width: 100%;"/>
+				</div>
+				<div class="mentors-info">
+					<div class="mentors-icons"></div>
+					<h2>Chance the Rapper</h2>
+					<p>Ut ac quam fringilla, molestie erat quis, laoreet mauris. In porta est gravida ante laoreet convallis.
+						Phasellus dapibus, tellus eget facilisis ullamcorper, velit massa eleifend nunc,
+						in eleifend sem erat sed quam. Praesent quis arcu a nisl feugiat pretium.
+					</p>
+				</div>
+    	</div>
 		</div>
   </div>
 	
@@ -28,6 +57,14 @@ export default {
     }
   },
   methods: {
+		swapNodes () {
+			console.log('swapping Node...');
+			this.swapSiblings(document.getElementById('1'), document.getElementById('2'), document.getElementById('3'))
+		},
+		swapSiblings(node1, node2, node3) {
+			let container = node2.parentNode;
+			container.appendChild(node2, node1, node3)
+		}
   }
 }
 </script>
@@ -50,8 +87,22 @@ export default {
 	}
 
 	.mentors{
-		width: 36%;
+		width: 30%;
 	}
+
+	.mentors-icons {
+		margin: 30px 0px;
+    display: flex;
+    width: 25%;
+		color: #20dd85;
+    font-size: 39px;
+    justify-content: space-between
+	}
+	.mentors-icons svg:hover {
+    cursor: pointer;
+    font-size: 35px;
+    transition: 0.5s;
+  }
 	.mentors-info {
 		font-family: sans-serif;
 	}
@@ -64,6 +115,11 @@ export default {
     font-weight: 900;
     color: #20dd85;
 	}
-  
+  .mentors-container {
+		margin: 2rem 0rem;
+		display: flex;
+    justify-content: space-between;
+    overflow: scroll;
+	}
 
 </style>>

@@ -44,9 +44,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="" style="display: flex; justify-content: flex-end;margin: 40px 74px 0px;">
+					<div class="btn-class">
 						<div class="btn-large">
-							<button style="width: 281px; height: 65px; background: #000c2d; color: white; border-radius: 5px; text-transform: uppercase; font-size: 14px;">view all resources</button>
+							<button>view all resources <font-awesome :icon="['fas', 'long-arrow-alt-right']"/></button>
 						</div>
 					</div>
 				</div>
@@ -89,9 +89,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="" style="display: flex; justify-content: flex-end;margin: 40px 74px 0px;">
+					<div class="btn-class">
 						<div class="btn-large">
-							<button style="width: 281px; height: 65px; background: #000c2d; color: white; text-transform: uppercase; border-radius: 5px; font-size: 14px;">view all resources</button>
+							<button>view all resources <font-awesome :icon="['fas', 'long-arrow-alt-right']"/></button>
 						</div>
 					</div>
 				</div>
@@ -115,19 +115,40 @@ export default {
 </script>
 
 <style scoped>
+
+	.btn-large  button:hover {
+		background: white;
+		color: #000c2d;
+		border: 2px solid #000c2d;
+		font-weight: 900;
+		font-size: 15px;
+	}
+	.btn-class {
+		display: flex; 
+		justify-content: flex-end;
+		margin: 40px 60px 0px;
+	}
+
+	.btn-large  button{
+		width: 281px; 
+		height: 65px; 
+		background: #000c2d; 
+		color: white; 
+		text-transform: uppercase; 
+		border-radius: 5px; 
+		font-size: 14px;
+		transition: 0.3s;
+	}
   .card {
     min-height: 450px;
     padding: 60px;
     background: #f3f3f4;
     color: black;
   }
-
 	.about {
 		display: flex;
-		justify-content: space-between;
-		
+		justify-content: space-between;	
 	}
-
 	.about-info {
 		margin-top: 2rem;
 	}
@@ -141,7 +162,6 @@ export default {
 		font-size: 50px;
 		font-weight: 800;
 	}
-
 	.images-container {
 		display: flex;
 		justify-content: space-between;
@@ -166,12 +186,13 @@ export default {
 	.card-image {
 		box-shadow: 0 24px 49px 0 rgba(0,0,0,0.1);
 		transition: 0.3s;
-		width: 80%;
+		width: 88%;
 		border-radius: 7px;
 	}
 
 	.card-image:hover {
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		cursor: pointer;
 	}
 
 	.container-image {

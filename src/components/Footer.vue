@@ -22,16 +22,23 @@
 				</div>
 			</div>
 			<div class="logo">
-				<g-image alt="Logo" src="~/logo.png" width="15" />Gidera <span>Your music career success partner</span>
+				<div class="logo-container">
+					<g-image alt="Logo" src="~/logo.png" style="width: 35px; height:35px;" />
+						<div class="logo-info">
+							<span>Gidera</span> <span class="logo-info-lower">Your music career success partner</span>
+						</div>
+				</div>
+				
+				
 			</div>
 		</div>
 		<div class="footer-2">
 			<span>@ 2018. All rights reserved</span>
 			<div class="social-icons">
-				<span>tww</span>
-				<span>fac</span>
-				<span>go</span>
-				<span>ins</span>
+				<font-awesome :icon="['fab', 'github']"/>
+				<font-awesome :icon="['fab', 'twitter']"/>
+				<font-awesome :icon="['fab', 'google']"/>
+				<font-awesome :icon="['fab', 'instagram']"/>
 			</div>
 		</div>
   </div>
@@ -62,11 +69,24 @@ export default {
 	.footer-2 {
 		display: flex;
     justify-content: space-between;
-    font-size: 10px;
+		font-size: 14px;
+    font-weight: lighter;
+	}
+
+	.social-icons {
+		width: 20%;
+		font-size: 20px;
+		color: #20de86;
+    display: flex;
+    justify-content: space-around;
+	}
+
+	.social-icons svg:hover{
+		cursor: pointer;
 	}
 
 	.footer {
-		min-height: 350px;
+		min-height: 386px;
     display: flex;
     justify-content: space-between;
 	}
@@ -82,9 +102,25 @@ export default {
 		margin-top: 2rem;
 		font-weight: lighter;
 	}
+
+	.blog span:hover{
+		color: #20de86;
+		cursor: pointer;
+	}
 	.logo{
 		width: 100%;
 		padding: 28px 0px 0px 8rem;
+	}
+
+	.logo-container{
+		display: flex;
+	}
+	.logo-info{
+    margin-left: 2rem;
+	}
+
+	.logo-info-lower{
+		display: block;
 	}
 
 </style>>

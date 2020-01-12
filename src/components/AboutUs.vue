@@ -8,8 +8,13 @@
       <div class="about-images">
 				<div class="line"></div>
         <div class="image-info">
-					<span>you're in great company</span>
+					<span>You're in great company</span>
 					<h1>Gidera seeks to connect young talented musicians with world class producers, managers etc</h1>
+
+					<div class="about-icons">
+						<font-awesome :icon="['far', 'arrow-alt-circle-left']"/>
+						<font-awesome :icon="['far', 'arrow-alt-circle-right']"/>
+					</div>
 				</div>
 
 				<div class="images-container">
@@ -65,7 +70,7 @@ export default {
 <style scoped>
   .card {
     min-height: 450px;
-    padding: 60px;
+    padding: 60px 60px 100px;
     background: #f3f3f4;
     color: black;
   }
@@ -75,6 +80,21 @@ export default {
 		justify-content: space-between;
 		
 	}
+
+	.about-icons {
+		margin: 30px 0px;
+    display: flex;
+    width: 11%;
+    font-size: 39px;
+    justify-content: space-between
+	}
+
+	.about-icons svg:hover {
+    cursor: pointer;
+    font-size: 35px;
+    transition: 0.5s;
+		color: #20de86;
+  }
 
 	.about-info {
 		margin-top: 2rem;
@@ -114,12 +134,13 @@ export default {
 	.card-image {
 		box-shadow: 0 24px 49px 0 rgba(0,0,0,0.1);
 		transition: 0.3s;
-		width: 80%;
+		width: 88%;
 		border-radius: 7px;
 	}
 
 	.card-image:hover {
 		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+		cursor: pointer;
 	}
 
 	.container-image {
