@@ -28,17 +28,8 @@ query {
 
 <script>
 export default {
-
-  methods: {
-    menubar () {
-      let sidebar = document.querySelectorAll('nav');
-      console.log(sidebar)
-    }
-  },
-  created() {
-    this.menubar();
+  methods: { 
   }
-  
 }
 </script>
 <style>
