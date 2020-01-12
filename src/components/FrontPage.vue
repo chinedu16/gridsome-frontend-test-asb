@@ -76,5 +76,12 @@ export default {
     font-weight: lighter;
 	}
   
+  @media only screen
+  and (min-device-width : 0px)
+  and (max-device-width : 798px) {
+    img{
+      display: none
+    }
+  }
 
-</style>>
+</style>

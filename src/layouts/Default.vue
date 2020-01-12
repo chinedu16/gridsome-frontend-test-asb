@@ -47,6 +47,14 @@ body {
   /* padding-right: 20px; */
 }
 
+@media only screen
+  
+  and (max-device-width : 668px) {
+    .layout{
+      width: fit-content;
+    }
+  }
+
 .header {
   font-size: 15px;
   padding: 0px 12rem 0px 30px;

@@ -153,4 +153,15 @@ export default {
 	.container-image h4 {
 		font-size: 21px;
 	}
+
+	
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 798px) {
+    img{
+      display: none
+    }
+  }
+  
+  
 </style>>
